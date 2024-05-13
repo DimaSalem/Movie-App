@@ -5,7 +5,7 @@ const app = express()
 const axios = require('axios');
 const cors = require('cors');
 app.use(cors());
-const port = 3002;
+//const port = 3002;
 const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -16,7 +16,7 @@ const DataBase = process.env.PG_DATABASE
 const password = process.env.PG_PASSWORD
 const UserName = process.env.PG_USER
 const Host = process.env.PG_HOST
-const Port = process.env.PG_PORT
+const port = process.env.PG_PORT
 const { Client } = require('pg');
 const dbURL = `postgresql://${UserName}:${password}@${Host}.oregon-postgres.render.com/${DataBase}?ssl=true`;
 const client = new Client(dbURL);
