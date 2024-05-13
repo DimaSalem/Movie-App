@@ -158,9 +158,7 @@ function topRatedHandler(req, res) {
 
 //Lab11
 function homePageHandler(req, res) {
-    let result;
-    //result = new Movie(movieData.title, movieData.poster_path, movieData.overview);
-    //res.json(result);
+    res.send("Welcome to home Page");
 }
 function favoritePgeHandler(req, res) {
     res.send("Welcome to Favorite Page");
@@ -174,6 +172,8 @@ function Movie(id, title, releaseDate, postarPath, overview) {
     this.postar_path = postarPath;
     this.overview = overview;
 }
+
+
 
 
 //error handler 
