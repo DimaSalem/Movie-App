@@ -12,13 +12,13 @@ app.use(bodyParser.json())
 
 const apiKey = process.env.API_KEY;
 //
-const DataBase = process.env.PG_DATABASE
-const password = process.env.PG_PASSWORD
-const UserName = process.env.PG_USER
-const Host = process.env.PG_HOST
+// const DataBase = process.env.PG_DATABASE
+// const password = process.env.PG_PASSWORD
+// const UserName = process.env.PG_USER
+// const Host = process.env.PG_HOST
 const port = process.env.PG_PORT
 const { Client } = require('pg');
-const dbURL = `postgresql://${UserName}:${password}@${Host}.oregon-postgres.render.com/${DataBase}?ssl=true`;
+const dbURL = process.env.DBURL;
 const client = new Client(dbURL);
 
 
